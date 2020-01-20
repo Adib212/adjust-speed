@@ -7,7 +7,12 @@
       r.onload = function(e) { 
           var contents = e.target.result;
           document.write("File Uploaded! <br />" + "name: " + f.name + "<br />");
-
+          var fix3 = ((0,"Start Gate to Checkpoint 1"	,0,"Checkpoint 1 to Checkpoint 2",0,"Checkpoint 2 to Finish Line",0,"Total",0)
+                      (	0,"Time(s)","Average Speed(m/s)","Time(s)","Average Speed(m/s)","Time(s)","Average Speed(m/s)","Time(s)","Average Speed(m/s)"));
+          document.write(fix3);
+          output1.push("<tr><td>" + lines[10].split(",").join("</td><td>") + "</td></tr>"); 
+          output1 = "<table>" + output.join("") + "</table>";
+          document1.write(output);
           var lines = contents.split("\n"), output = [];
           for (var i=0; i<lines.length; i++){
             output.push("<tr><td>" + lines[i].split(",").join("</td><td>") + "</td></tr>");
