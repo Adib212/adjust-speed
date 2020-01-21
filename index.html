@@ -7,8 +7,8 @@
       r.onload = function(e) { 
           var contents = e.target.result;
           document.write("File Uploaded! <br />" + "name: " + f.name + "<br />" );
-          var c1t1 = contents.getRange(3,1).getValue();
-          document.write("Car 1 Time: try2" + c1t1 + "<bar />");
+          var c1t1 = contents.rows[3].cells[1].innerHTML;
+          document.write("Car 1 Time: try3" + c1t1 + "<bar />");
       
           var lines = contents.split("\n"), output = [];
           for (var i=0; i<6; i++){
