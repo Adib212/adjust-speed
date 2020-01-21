@@ -6,11 +6,14 @@
       var r = new FileReader();
       r.onload = function(e) { 
           var contents = e.target.result;
-          var data = Papa.parse(contents);
-          var c1t1 = data[3][1];
+      
           document.write("car 1 time: " c1t1 + "<br />");
-          document.write("File Uploaded! try7 <br />" + "name: " + f.name + "<br />" );
+          document.write("File Uploaded! try8 <br />" + "name: " + f.name + "<br />" );
           var lines = contents.split("\n"), output = [];
+        
+          <p id="c1t1"></p>
+           document.getElementById("c1t1").innerHTML = output(contents[3][1];
+           document.write("car 1: " c1t1 + "<br />");
           for (var i=0; i<6; i++){
             output.push("<tr><td>" + lines[i].split(",").join("</td><td>") + "</td></tr>");
           }
