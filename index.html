@@ -6,14 +6,22 @@
       var r = new FileReader();
       r.onload = function(e) { 
           var contents = e.target.result;
-          document.write("File Uploaded! try9 <br />" + "name: " + f.name + "<br />" );
-          var lines = contents.split("\n"), output = [];
-           document.write(lines[3].cells[1]);
+          document.write("File Uploaded! try10 <br />" + "name: " + f.name + "<br />" );
           for (var i=0; i<6; i++){
             output.push("<tr><td>" + lines[i].split(",").join("</td><td>") + "</td></tr>");
           }
+            for (var i=1; i<6; i++) {
+              var data = lines[i].split(',');
+               if (data.length == headers.length) {
+                   var tarr = [];
+                   for (var j=0; j<headers.length; j++) {
+                   tarr.push(headers[j]+":"+data[j]);
+            }
+            lines.push(tarr);
+        }
           output = "<table>" + output.join("") + "</table>";
           document.write(output);
+          
      }
       r.readAsText(f);
       document.write(output);
