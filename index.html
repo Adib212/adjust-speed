@@ -6,8 +6,9 @@
       var r = new FileReader();
       r.onload = function(e) { 
           var contents = e.target.result;
-          document.write("File Uploaded! try8 <br />" + "name: " + f.name + "<br />" );
+          document.write("File Uploaded! try9 <br />" + "name: " + f.name + "<br />" );
           var lines = contents.split("\n"), output = [];
+           document.write(lines[3].cells[1]);
           for (var i=0; i<6; i++){
             output.push("<tr><td>" + lines[i].split(",").join("</td><td>") + "</td></tr>");
           }
